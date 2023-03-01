@@ -1,5 +1,5 @@
 :root {
-    --header: 35vh;
+    --header: 33vh;
     --footer: 20vh;
     --main: calc(100vh - calc(var(--header) + var(--footer)));
 }
@@ -30,7 +30,7 @@ main {
     display: flex;
 }
 
-/* ------------------------------ */
+/* ---------------------------------- */
 /*** LEFT PANEL ***/
 .left-container {
     width: 35vw;
@@ -48,7 +48,7 @@ main {
 .right-container {
     width: 65vw;
 }
-/* HEADER */
+/*-- HEADER --*/
 .header {
     height: var(--header);
     padding: 100px 35px 0;
@@ -59,7 +59,7 @@ main {
 .header p:nth-child(2) {
     margin-top: 30px;
 }
-/* BODY FORM */
+/*-- BODY FORM --*/
 .form-body {
     height: var(--main);
     display: grid;
@@ -77,9 +77,45 @@ main {
     flex-direction: column;
 }
 input {
-    width: 65%;
+    padding: 5px;
+    border: 1px solid rgb(200, 209, 208);
+    background-color: rgba(235, 238, 241, 0.821);
+    border-radius: 5px;
+    width: 75%;
 }
-/* FOOTER */
+input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.821);
+}
+input:not(:placeholder-shown):valid {
+    border: 2px solid rgb(0, 159, 93);
+}
+input:not(:placeholder-shown).active:invalid {
+    border: 2px solid rgb(222, 4, 4);
+}
+input:not(:placeholder-shown).active:invalid ~ span {
+    opacity: 1;
+    color: red;
+}
+
+label {
+    position: relative;
+}
+label span {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    color: red;
+    font-size: 20px;
+    padding-left: 5px;
+}
+/* for error prompts */
+div > span {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+/*-- FOOTER --*/
 .footer {
     height: var(--footer);
     background-color: aliceblue;
@@ -92,7 +128,7 @@ button {
     border-radius: 10px;
     border: none;
     background-color: rgb(151, 31, 39);
-    color: rgb(240, 231, 231);
+    color: rgb(246, 242, 242);
     box-shadow: 3px 2px 10px 2px rgb(0 0 0 / 10%);
 }
 
