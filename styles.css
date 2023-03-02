@@ -2,11 +2,15 @@
     --header: 33vh;
     --footer: 20vh;
     --main: calc(100vh - calc(var(--header) + var(--footer)));
+    --transition: all .2s ease-in;
+
 }
 
 @font-face {
     font-family: aperture;
     src: url(assets/NimbusSansT-BoldCondensed.otf);
+    font-family: typewriter;
+    src: url(assets/Mom差___.ttf);
 }
 
 *, *::before, *::after {
@@ -65,7 +69,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 12px;
+    gap: 15px;
     padding: 30px 35px 30px;
 }
 .form-body h1 {
@@ -76,38 +80,73 @@ main {
     display: flex;
     flex-direction: column;
 }
+div.form-signup {
+    position: relative;
+}
+label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: .8rem;
+    font-family: typewriter, Arial, Helvetica, sans-serif;
+    line-break: 10px;
+    transition: all .3s linear;
+}
+label.focus {
+    color: #ece4de;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    background-color:rgb(11, 110, 217);
+    padding: 5px 25px;
+    border-radius: 5px;
+    transform: translateX(-6px) translateY(-30px) scale(0.7);
+}
+/* asterisk (*) requirement */
+.label::after {
+    position: absolute;
+    top: -4px;
+    content: '*';
+    font-weight: bold;
+    vertical-align: text-top;
+    color: red;
+    font-size: 25px;
+    padding-left: 5px;
+}
+/* asterisk (*) requirement w/ 'focus' */
+.label.focus::after {
+    top: 4px;
+}
 input {
     padding: 5px;
-    border: 1px solid rgb(200, 209, 208);
-    background-color: rgba(235, 238, 241, 0.821);
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid rgba(175, 183, 190, 0.821);
     width: 75%;
+    transition: var(--transition);
+}
+input:not(:focus)::placeholder {
+    opacity: 0;
+    transition: var(--transition);
+}
+input:focus::placeholder {
+    opacity: 1;
 }
 input:focus {
     outline: none;
+    border: 2px solid rgb(200, 209, 208);
     background-color: rgba(255, 255, 255, 0.821);
+    border-radius: 5px;
 }
 input:not(:placeholder-shown):valid {
     border: 2px solid rgb(0, 159, 93);
+    border-radius: 5px;
 }
 input:not(:placeholder-shown).active:invalid {
     border: 2px solid rgb(222, 4, 4);
+    border-radius: 5px;
 }
 input:not(:placeholder-shown).active:invalid ~ span {
     opacity: 1;
     color: red;
-}
-
-label {
-    position: relative;
-}
-label span {
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    color: red;
-    font-size: 20px;
-    padding-left: 5px;
 }
 /* for error prompts */
 div > span {

@@ -24,31 +24,33 @@
             <form action="">
                 <div class="form-body">
                     <h1>Let's do this!</h1>
-                    <div>
-                        <label for="first-name">FIRST NAME<span>*</span></label>
+                    <div class="form-signup">
+                        <label class="first-name label" for="first-name">FIRST NAME</label>
                         <input type="text" name="first-name" id="first-name" placeholder=" " required>
                     </div>
-                    <div>
-                        <label for="last-name">LAST NAME</label>
+                    <div class="form-signup">
+                        <label class="last-name-label" for="last-name">LAST NAME</label>
                         <input type="text" name="last-name" id="last-name" placeholder=" ">
                     </div>
-                    <div>
-                        <label for="email">EMAIL<span>*</span></label>
+                    <div class="form-signup">
+                        <label class="email label" for="email">EMAIL</label>
                         <input type="email" name="email" id="email" required placeholder="chell@example.com">
                         <span id="email-error">Please enter a valid email.</span>
                     </div>
-                    <div>
-                        <label for="phone">PHONE NUMBER</label>
+                    <div class="form-signup">
+                        <label class="phone-label" for="phone">PHONE NUMBER</label>
                         <input type="tel" name="phone" id="phone" pattern="\(?\d{3}\)?-?\d{3}-?\d{4}" placeholder="646-234-2354">
                         <span id="phone-error">Please enter a valid phone number.</span>
                     </div>
-                    <div>
-                        <label for="password">PASSWORD<span>*</span></label>
-                        <input type="password" name="password" id="password" placeholder=" " minlength="5" required>
+                    <div class="form-signup">
+                        <label class="password1 label" for="password1">PASSWORD</label>
+                        <input type="password" name="password" id="password1" placeholder=" " minlength="5" required>
+                        <span class="password-requirement">Minimum 8 characters.</span> 
                     </div>
-                    <div>
-                        <label for="password-confirm">CONFIRM PASSWORD<span>*</span></label>
-                        <input type="password" name="password" id="password" placeholder=" "minlength="5" required>
+                    <div class="form-signup">
+                        <label class="password2 label" for="password2">CONFIRM PASSWORD</label>
+                        <input type="password" name="password-confirm" id="password2" placeholder=" "minlength="5" required>
+                        <span class="password-confirm">Password does not match.</span> 
                     </div>
                 </div>
 
