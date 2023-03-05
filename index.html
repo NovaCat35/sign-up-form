@@ -5,25 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Courier+Prime&family=Ewert&family=Fredericka+the+Great&family=Libre+Baskerville&family=Lily+Script+One&family=Londrina+Sketch&family=Monoton&family=Special+Elite&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="left-container">
-            <h1>Aperture Science</h1>
+            <div class="logo-container">
+                <div class="logo">
+                    <img id='aperture-logo' src="images/aperture-logo1.svg" alt="aperture logo">
+                    <div class="logo-words">
+                        <h1>APERTURE</h1>
+                        <p>LABORATORIES</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <img id='aperture-logo2' src="images/logo-reference.svg" alt="aperture logo-reference"> -->
+
         </div>
         <div class="right-container">
             <div class="header">
                 <p>
-                    Welcome to Aperture Science. We need you, future explorers and innovators of science.
-                    Testing is the future, and the future starts with you.
+                    Welcome to Aperture Science, future explorers, olympians, and innovators of science.
+                    Testing is the future, and the future starts with <span>you</span> !
                 </p>
-                <p>Sign up now. </p>
+                <p>Let's get out there and make science.</p>
             </div>
 
             <form action="">
                 <div class="form-body">
-                    <h1>Let's do this!</h1>
+                    <h1>Sign up now. </h1>
                     <div class="form-signup">
                         <label class="first-name label" for="first-name">FIRST NAME</label>
                         <input type="text" name="first-name" id="first-name" placeholder=" " required>
@@ -44,12 +57,12 @@
                     </div>
                     <div class="form-signup">
                         <label class="password1 label" for="password1">PASSWORD</label>
-                        <input type="password" name="password" id="password1" placeholder=" " minlength="5" required>
+                        <input type="password" name="password" id="password1" placeholder=" " minlength="8" required>
                         <span class="password-requirement">Minimum 8 characters.</span> 
                     </div>
                     <div class="form-signup">
                         <label class="password2 label" for="password2">CONFIRM PASSWORD</label>
-                        <input type="password" name="password-confirm" id="password2" placeholder=" "minlength="5" required>
+                        <input type="password" name="password-confirm" id="password2" placeholder=" "minlength="8" required>
                         <span class="password-confirm">Password does not match.</span> 
                     </div>
                 </div>
