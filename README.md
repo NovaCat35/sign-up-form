@@ -4,6 +4,10 @@ A basic sign-up form created using HTML, CSS, Javascript. It contains validation
 
 [Click me!](https://novacat35.github.io/sign-up-form/) 📝
 
+Laptop:
+<img width="1440" alt="Screenshot 2023-03-05 at 10 52 28 PM" src="https://user-images.githubusercontent.com/54908064/223015835-b3aecb38-559d-4c0b-88a3-17c1846d73d0.png">
+
+IPAD:
 <img width="684" alt="Screenshot 2023-03-05 at 4 24 14 PM" src="https://user-images.githubusercontent.com/54908064/222986907-5e38f413-8fcc-4863-8645-6d8615662cf7.png">
 
 > TIP: A twitter thread about making good sign-up forms
