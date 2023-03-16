@@ -38,7 +38,7 @@ main {
 /***** LEFT PANEL *****/
 .left-container {
     width: 40vw;
-    background-color: #03090f;
+    /* background-color: #03090f; */
     background-image: url('images/portal-poster.jpg'); 
     background-size: cover;
     background-position: center;
@@ -243,6 +243,10 @@ button {
     background-color: rgb(151, 31, 39);
     color: rgb(246, 242, 242);
     box-shadow: 3px 2px 10px 2px rgb(0 0 0 / 10%);
+    transition: all .25s ease-out;
+}
+button:hover {
+    background-color: rgb(184, 41, 50);
 }
 a {
     text-decoration: none;
